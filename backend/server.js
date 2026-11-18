@@ -6,7 +6,7 @@ import employeeRoutes from './routes/employeeRoutes.js';
 dotenv.config();
 const app = express();
 app.use(cors({
-    origin: process.env.FRONTEND_URL
+    origin: process.env.MONGODB_URI
 }));
 app.use(express.json());
 app.use('/api/employees', employeeRoutes);
